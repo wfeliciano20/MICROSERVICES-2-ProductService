@@ -20,7 +20,7 @@ public class PaymentController {
         return new ResponseEntity<>(paymentService.doPayement(paymentRequest), HttpStatus.CREATED);
     }
 
-    @GetMapping("/{orderId}")
+    @GetMapping("/order/{orderId}")
     public ResponseEntity<PaymentResponse> getPaymentDetailsByOrderId(@PathVariable("orderId") long orderId){
         return new ResponseEntity<>(paymentService.getPaymentDetailsByOrderId(orderId),HttpStatus.OK);
     }
